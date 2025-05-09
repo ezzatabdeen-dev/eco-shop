@@ -41,7 +41,11 @@ navItems.forEach(({ id, label }) => {
   const li2 = document.createElement("li");
   li2.textContent = label;
 
-  if (id === currentPage) {
+  if (
+    ((currentPage === "" || currentPage === "index.php") && id === "index.php") || ((currentPage === "cart.php" || currentPage === "product-checkout.php") && id === "index.php")) {
+    li1.classList.add("active");
+    li2.classList.add("active");
+  } else if (id === currentPage) {
     li1.classList.add("active");
     li2.classList.add("active");
   }
