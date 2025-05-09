@@ -1,0 +1,259 @@
+.topSelectedContainer .topSelectedItems {
+  width: 75%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(229, 229, 229, 0.25);
+  border-radius: 0.5rem;
+}
+
+.topSelectedContainer .topSelectedItems .topSelectedHeader {
+  position: relative;
+  height: 3.75rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.topSelectedContainer .topSelectedItems .topSelectedHeader::before,
+.topSelectedContainer .topSelectedItems .topSelectedHeader::after {
+  content: "";
+  height: 1.75px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.topSelectedContainer .topSelectedItems .topSelectedHeader::before {
+  width: 100%;
+  background-color: var(--Neutral-200);
+}
+
+.topSelectedContainer .topSelectedItems .topSelectedHeader::after {
+  width: 5rem;
+  background-color: var(--Orange-550);
+}
+
+.topSelectedContainer .topSelectedItems .topSelectedHeader .topSelectedTitle {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-next,
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Orange-550);
+  font-size: 2rem !important;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-next:hover,
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-prev:hover {
+  background-color: var(--Orange-600);
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-next {
+  right: 0;
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-prev {
+  right: 2.5rem;
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-next
+  svg,
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-prev
+  svg {
+  width: 50%;
+  height: 50%;
+  fill: var(--Slate-950);
+  transition: fill 0.2s ease-in-out;
+}
+
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-next:hover
+  svg,
+.topSelectedContainer
+  .topSelectedItems
+  .topSelectedHeader
+  .topSelectedSliderControler
+  .topSelectedProduct-prev:hover
+  svg {
+  fill: #fff;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide {
+  height: 370px !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(229, 229, 229, 0.5);
+  position: relative;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide a .product-img img {
+  width: 100%;
+  height: auto;
+  max-height: 150px !important;
+  object-fit: contain;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 100px;
+  align-items: center;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-label button {
+  border: none;
+  outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-label button span {
+  background-color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--Neutral-200);
+  transition: background 0.2s ease-in-out;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-label button:hover span {
+  background-color: var(--Orange-550);
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-label button span svg {
+  width: 50%;
+  height: 50%;
+  stroke-width: 1rem;
+  transition: fill 0.2s ease-in-out;
+}
+
+.topSelectedProdutsSlider
+  .swiper-slide
+  .productSlide
+  .product-label
+  .addproductPopuler:hover
+  span
+  svg {
+  fill: red;
+}
+.topSelectedProdutsSlider
+  .swiper-slide
+  .productSlide
+  .product-label
+  .addproductCar:hover
+  span
+  svg {
+  fill: #fff;
+}
+
+.topSelectedProdutsSlider .swiper-slide .productSlide .product-body {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.productSlide .product-body .product-category,
+.productSlide .product-body .product-price {
+  color: rgb(51, 51, 51);
+}
+
+.productSlide .product-body .product-name a {
+  color: var(--Slate-950);
+  font-weight: 600;
+}
+
+.starColor {
+  color: var(--Yellow-500);
+}
+
+/* Media Query */
+
+@media (max-width: 1250px) {
+  .topSelectedItems {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .topSelectedItems {
+    width: 95% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .topSelectedProdutsSlider .swiper-slide .productSlide {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .topSelectedProdutsSlider .swiper-slide .productSlide:hover {
+    transform: scale(1.02);
+  }
+
+  .topSelectedProdutsSlider .swiper-slide .productSlide .product-label {
+    top: 0;
+    transform: scaleY(0);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .topSelectedProdutsSlider .swiper-slide .productSlide:hover .product-label {
+    transform: scaleY(1);
+    top: 0.5rem;
+  }
+}

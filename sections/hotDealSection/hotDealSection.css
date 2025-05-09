@@ -1,0 +1,222 @@
+.hotDealSection .hotDealItems {
+  width: 75%;
+  height: 370px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.75rem;
+  background-color: #fff;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsLeft,
+.hotDealSection .hotDealItems .hotDealItemsRight {
+  width: 320px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsLeft img,
+.hotDealSection .hotDealItems .hotDealItemsRight img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li {
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.0625rem;
+  background-color: var(--Orange-550);
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li span.timeName {
+  font-size: 60%;
+  font-weight: bold;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li span.timeNumber {
+  font-weight: bold;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .hotDealTitle {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .hotDealDiscription {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Orange-550);
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn span {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 95%;
+  transition: color 0.2s ease-in-out;
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn:hover {
+  background-color: var(--Orange-600);
+  transform: scale(0.99);
+}
+
+.hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn:hover span {
+  color: var(--Slate-950);
+}
+
+/* Mwdia Query */
+
+@media (max-width: 1250px) {
+  .hotDealSection .hotDealItems {
+    width: 90% !important;
+    height: 330px;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .hotDealTitle,
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .hotDealDiscription {
+    font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+    line-height: clamp(1.5rem, 1.425rem + 0.375vw, 1.75rem);
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn {
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .shopBtn span {
+    font-size: 85%;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.25rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hotDealSection .hotDealItems {
+    width: 95% !important;
+    height: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hotDealSection .hotDealItems {
+    flex-direction: column;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .sm\:disable {
+    display: none !important;
+  }
+
+  .sm\:top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sm\:top img {
+    width: 50% !important;
+    height: auto;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul {
+    gap: 0;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li {
+    position: relative;
+    border-radius: 0 !important;
+    background-color: transparent;
+    gap: .5rem;
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li span.timeNumber {
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    line-height: clamp(1.5rem, 1.45rem + 0.25vw, 1.75rem);
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .timeDown ul li:not(:last-child)::after {
+    content: ":";
+    position: absolute;
+    top: 25%;
+    right: 0;
+    transform: translateY(-25%);
+    font-size: 120%;
+    opacity: 1;
+    animation: timeGenration 1s infinite;
+  }
+
+  @keyframes timeGenration {
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .hotDealSection .hotDealItems .hotDealItemsMiddle .hotDealTitle {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .lg\:disable {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .sm\:top {
+    flex-direction: column;
+  }
+
+  .sm\:top img {
+    width: 50% !important;
+  }
+}
